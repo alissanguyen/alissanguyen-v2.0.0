@@ -35,9 +35,9 @@ export const WEBSITE_DESCRIPTION =
 export const BLOG_DESCRIPTION =
   "Hi, I'm Alissa. I write blog about what I know and tutorials for Remix, React, web development and more.";
 export const PORTFOLIO_IMAGE_URL =
-  "https://www.alissanguyen.dev/images/preview.jpg";
+  "https://www.alissanguyen.com/images/preview.jpg";
 export const BLOG_IMAGE_URL =
-  "https://www.alissanguyen.dev/images/blogpreview.jpg";
+  "https://www.alissanguyen.com/images/blogpreview.jpg";
 
 export const topLevelLinksOnMobile: { href: string; displayName: string }[] = [
   {
@@ -395,61 +395,61 @@ export const otherProjects = [
   }
 ];
 
-const facts = [
-  {
-    index: 1,
-    title: "I love cats and I have two :)",
-    description:
-      "Rosie (girl) and Felix (boy) are my love and energy to work hard everyday.",
-    background: "/images/facts/cat.jpg"
-  },
-  {
-    index: 2,
-    title: `I once applied to Harvard`,
-    description: "Yeah.. It's a long story...but basically I got deferred haha",
-    background: "/images/facts/harvard.jpg"
-  },
-  {
-    index: 3,
-    title: "I am not afraid of snakes or spiders",
-    description: "They are everywhere in Vietnam so that's why I adapted.",
-    background: "/images/facts/snake.jpg"
-  },
-  {
-    index: 4,
-    title: "I am a very ambitious person",
-    description:
-      "When I was 10 I thought I can be the president of Europe XD. ",
-    background: "/images/facts/ambitious.jpg"
-  },
-  {
-    index: 5,
-    title: "My favorite subject was Math",
-    description:
-      "I love it in high school. I guess it's the asian trait in me.",
-    background: "/images/facts/math.jpg"
-  },
-  {
-    index: 6,
-    title: "I unbelievably love mayonnaise!",
-    description:
-      "I can eat mayo with pretty much everything (except desserts LOL).",
-    background: "/images/facts/mayonnaise.jpg"
-  },
-  {
-    index: 7,
-    title: "I play 3 musical instruments",
-    description:
-      "I used to play ukulele, piano, and organ, now I only play ukulele.",
-    background: "/images/facts/piano.jpg"
-  },
-  {
-    index: 8,
-    title: "I really like dad jokes but I suck at them",
-    description: "Unfortunately these jokes only work if you git them.",
-    background: "/images/facts/dad-joke.jpg"
-  }
-];
+// const facts = [
+//   {
+//     index: 1,
+//     title: "I love cats and I have two :)",
+//     description:
+//       "Rosie (girl) and Felix (boy) are my love and energy to work hard everyday.",
+//     background: "/images/facts/cat.jpg"
+//   },
+//   {
+//     index: 2,
+//     title: `I once applied to Harvard`,
+//     description: "Yeah.. It's a long story...but basically I got deferred haha",
+//     background: "/images/facts/harvard.jpg"
+//   },
+//   {
+//     index: 3,
+//     title: "I am not afraid of snakes or spiders",
+//     description: "They are everywhere in Vietnam so that's why I adapted.",
+//     background: "/images/facts/snake.jpg"
+//   },
+//   {
+//     index: 4,
+//     title: "I am a very ambitious person",
+//     description:
+//       "When I was 10 I thought I can be the president of Europe XD. ",
+//     background: "/images/facts/ambitious.jpg"
+//   },
+//   {
+//     index: 5,
+//     title: "My favorite subject was Math",
+//     description:
+//       "I love it in high school. I guess it's the asian trait in me.",
+//     background: "/images/facts/math.jpg"
+//   },
+//   {
+//     index: 6,
+//     title: "I unbelievably love mayonnaise!",
+//     description:
+//       "I can eat mayo with pretty much everything (except desserts LOL).",
+//     background: "/images/facts/mayonnaise.jpg"
+//   },
+//   {
+//     index: 7,
+//     title: "I play 3 musical instruments",
+//     description:
+//       "I used to play ukulele, piano, and organ, now I only play ukulele.",
+//     background: "/images/facts/piano.jpg"
+//   },
+//   {
+//     index: 8,
+//     title: "I really like dad jokes but I suck at them",
+//     description: "Unfortunately these jokes only work if you git them.",
+//     background: "/images/facts/dad-joke.jpg"
+//   }
+// ];
 
 export const funFacts = [
   {
