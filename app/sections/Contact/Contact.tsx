@@ -1,0 +1,104 @@
+import { LinksFunction } from "@remix-run/node";
+import { Form } from "@remix-run/react"
+import * as React from "react";
+
+import Alert from "~/components/Alert";
+import { contactFormHtmlId } from "~/constants";
+import { useTheme } from "~/providers/ThemeProvider";
+import { AlertType, ContactFormFields, SupportedTheme } from "~/types";
+import { ContactFormFieldErrors } from "~/utils/functions";
+
+import styles from "./Contact.css";
+
+interface Props {
+  fieldErrors: Partial<ContactFormFieldErrors> | undefined;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  transition: any;
+}
+
+export const links: LinksFunction = () => [
+  {
+    rel: "stylesheet",
+    href: styles
+  }
+];
+
+const ContactMeSection: React.FC<Props> = (props) => {
+  const { fieldErrors, transition } = props;
+  const { theme } = useTheme();
+
+  const hasError = fieldErrors && Object.keys(fieldErrors).length > 0;
+  const hasSuccess = fieldErrors && Object.keys(fieldErrors).length === 0;
+
+  const errorMessageClassname = theme === SupportedTheme.DARK ? "text-[rgb(0, 255, 127)]" : "text-[rgb(255, 0, 0)]"
+
+  const buttonText = hasError ? "Failed to send" :
+    transition.state === "submitting"
+      ? "Sending..."
+      : transition.state === "loading"
+        ? "Sent!"
+        : "Send";
+
+  return (
+      <div className="contact-form-wrapper w-max">
+         {hasError ? (
+            <Alert
+              message={"Failed to send message, please try again."}
+              type={AlertType.ERROR}
+            />
+          ) : hasSuccess ? (
+            <Alert
+              message={"I've received your message :)"}
+              type={AlertType.SUCCESS}
+            />
+          ) : null}
+        <Form
+          id={contactFormHtmlId}
+          method="post"
+          action="/?index"
+          className="contact-form flex flex-col text-contact-label w-full"
+        >
+          <label
+            htmlFor={ContactFormFields.email}
+            className="text-base pt-2 pb-1"
+          >
+            Your email
+          </label>
+          <input
+            id={ContactFormFields.email}
+            name={ContactFormFields.email}
+            type="email"
+            required
+            className="Form__Input rounded-lg relative block w-full px-3 py-1"
+          />
+          <div className={`error text-sm font-medium italic ${errorMessageClassname}`}>
+            <p>{fieldErrors?.email && fieldErrors?.email}</p>
+          </div>
+          <label
+            htmlFor={ContactFormFields.message}
+            className="text-textLgcolor text-base pt-2 pb-1"
+          >
+            Your message
+          </label>
+          <textarea
+            id={ContactFormFields.message}
+            name={ContactFormFields.message}
+            required
+            className="Form__Input rounded-lg relative block w-full px-3 py-1"
+          />
+          <div className={`error text-sm font-medium italic ${errorMessageClassname}`}>
+            <p>{fieldErrors?.message ? fieldErrors?.message : null}</p>
+          </div>
+          <button
+            type="submit"
+            name="Send"
+            className="contact-btn border-2 border-contact-buttonBorder hover:bg-contact-buttonHover rounded-lg text-base mt-7 text-lgColor py-3 w-full"
+          >
+            {buttonText}
+          </button>
+        </Form>
+      </div>
+  );
+};
+
+export default ContactMeSection;
