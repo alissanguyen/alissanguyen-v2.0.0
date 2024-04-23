@@ -1,0 +1,62 @@
+/* ---------------------------PROJECTS SECTION-------------------------- */
+/* ---------------------------PROJECTS SECTION-------------------------- */
+/* ---------------------------PROJECTS SECTION-------------------------- */
+/* ---------------------------PROJECTS SECTION-------------------------- */
+/* ---------------------------PROJECTS SECTION-------------------------- */
+/* ---------------------------PROJECTS SECTION-------------------------- */
+/* ---------------------------PROJECTS SECTION-------------------------- */
+@media screen and (min-width: 520px) {
+  .main-project-small-buttons {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .main-project-buttons {
+    display: none;
+  }
+}
+
+.gradient-blob {
+  z-index: -10;
+  right: -45%;
+  top: 40%;
+  animation: blob-float 6s ease-in-out 1s infinite alternate;
+}
+.FeaturedProject__Card {
+  backdrop-filter: blur(20px);
+  z-index: 1;
+}
+
+/* OTHER PROJECTS */
+.other-project-wrapper {
+  border-bottom: 1px solid var(--other-project-border);
+}
+
+/* RECENT PROJECTS */
+.project-slide-up {
+	animation: slide-in-bottom cubic-bezier(0.250, 0.460, 0.450, 0.940);
+}
+
+@-webkit-keyframes slide-in-bottom {
+  0% {
+    transform: translateY(1000px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-bottom {
+  0% {
+    -webkit-transform: translateY(1000px);
+            transform: translateY(1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
