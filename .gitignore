@@ -1,5 +1,7 @@
 node_modules
 
+/.cache
+_build
 /build
 /public/build
 .env
@@ -8,3 +10,10 @@ node_modules
 /cypress/videos
 /prisma/data.db
 /prisma/data.db-journal
+
+.vercel
+
+**/.DS_Store
+.DS_Store
+
+/app/assets/disposal
