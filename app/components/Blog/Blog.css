@@ -1,0 +1,69 @@
+.Card__Image {
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-top: -30px;
+  border-radius: 6px;
+  box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56),
+    0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+}
+
+.Card__Container {
+  background-color: var(--background-color);
+  border: solid 2px var(--blog-card-border);
+}
+.Card__Container:hover {
+  border: solid 2px var(--blog-card-border-hover);
+  transition-duration: 0.2s;
+}
+
+.decorative-bg {
+  z-index: -10;
+  width: 40%;
+  right: 1rem;
+}
+
+/* TAG BUTTON */
+.focus-ring {
+  transition-property: all;
+  transition-duration: 0.3s;
+}
+
+.focus-ring:hover {
+  box-shadow: var(--tag-btn-shadow);
+}
+
+/* COPY URL BUTTON */
+
+.url-button {
+  display: none;
+  right: 1rem;
+  top: 10px;
+}
+.url-button:hover + .Card__Image {
+  filter: brightness(0.4);
+}
+@media screen and (min-width: 420px) {
+  .Card__Container:hover > .url-button {
+    display: block;
+  }
+  .Card__Container:focus > .url-button {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .url-button {
+    display: block;
+  }
+}
+
+/* SUBSCRIBE BUTTON */
+.Subscribe__Button {
+  transition-property: all;
+  transition-duration: 0.3s;
+}
+
+.Subscribe__Button:hover {
+  box-shadow: var(--tag-btn-shadow);
+}
+
